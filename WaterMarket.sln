@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31105.61
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WaterMarket.WebApi", "WaterMarket.WebApi\WaterMarket.WebApi.csproj", "{E5EABBF0-77B0-473B-AFEA-5FD4A2D8FA7C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.0 Presentation", "1.0 Presentation", "{D3DF5A76-9FB0-48C3-B7BE-167A7EEE31F1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.0 API", "2.0 API", "{1D588B97-EA52-4575-B39D-A6956F755F49}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.0 Domain", "3.0 Domain", "{A6F4F481-F81B-408A-B048-43EB689812C5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.0 Infrastracture", "4.0 Infrastracture", "{A1955510-0207-4B12-A86B-AF91CB6CD3A9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WaterMarket.Domain", "WaterMarket.Domain\WaterMarket.Domain.csproj", "{4264B3EE-EFF0-45C1-A637-B6FCF412A60C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WaterMarket.Domain.Models", "WaterMarket.Domain.Models\WaterMarket.Domain.Models.csproj", "{FEBFE2C9-831C-4893-A6B6-ED3FB6E690F2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WaterMarket.Infrastracture.Persistence", "WaterMarket.Infrastracture.Persistence\WaterMarket.Infrastracture.Persistence.csproj", "{9422944B-79DD-439B-B734-BF2F11E6E0A3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E5EABBF0-77B0-473B-AFEA-5FD4A2D8FA7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5EABBF0-77B0-473B-AFEA-5FD4A2D8FA7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5EABBF0-77B0-473B-AFEA-5FD4A2D8FA7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5EABBF0-77B0-473B-AFEA-5FD4A2D8FA7C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4264B3EE-EFF0-45C1-A637-B6FCF412A60C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4264B3EE-EFF0-45C1-A637-B6FCF412A60C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4264B3EE-EFF0-45C1-A637-B6FCF412A60C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4264B3EE-EFF0-45C1-A637-B6FCF412A60C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FEBFE2C9-831C-4893-A6B6-ED3FB6E690F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEBFE2C9-831C-4893-A6B6-ED3FB6E690F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEBFE2C9-831C-4893-A6B6-ED3FB6E690F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEBFE2C9-831C-4893-A6B6-ED3FB6E690F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9422944B-79DD-439B-B734-BF2F11E6E0A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9422944B-79DD-439B-B734-BF2F11E6E0A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9422944B-79DD-439B-B734-BF2F11E6E0A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9422944B-79DD-439B-B734-BF2F11E6E0A3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E5EABBF0-77B0-473B-AFEA-5FD4A2D8FA7C} = {1D588B97-EA52-4575-B39D-A6956F755F49}
+		{4264B3EE-EFF0-45C1-A637-B6FCF412A60C} = {A6F4F481-F81B-408A-B048-43EB689812C5}
+		{FEBFE2C9-831C-4893-A6B6-ED3FB6E690F2} = {A6F4F481-F81B-408A-B048-43EB689812C5}
+		{9422944B-79DD-439B-B734-BF2F11E6E0A3} = {A1955510-0207-4B12-A86B-AF91CB6CD3A9}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3F7F42A4-01D7-4403-822F-77C2EDDA526C}
+	EndGlobalSection
+EndGlobal
