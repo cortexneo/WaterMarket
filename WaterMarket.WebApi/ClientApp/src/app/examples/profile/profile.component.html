@@ -2,7 +2,11 @@
     <div class="page-header section-dark" style="background-image: url('https://i.ibb.co/MfKxxS7/water.jpg');">
         <div class="filter"></div>
         <div class="section profile-content" style="width: 75% !important; padding: 1rem !important;">
-            <p style="font-size: 1rem !important; font-weight: 700 !important;"><b>ADMIN</b></p>
+            <div class="d-flex justify-content-between align-items-center" style="margin-bottom: 1rem !important">
+                <p style="font-size: 1rem !important; font-weight: 700 !important;"><b>ADMIN</b></p>
+                <button class="btn btn-danger btn-round" style="font-size: 10px !important;" (click)="logout()">Log
+                    Out</button>
+            </div>
 
             <table class="table table-striped">
                 <thead>
@@ -21,6 +25,17 @@
                         <td>{{ customer.address}}</td>
                         <td>{{ customer.contactNumber}}</td>
                         <td>{{ customer.order.orderedProducts}}</td>
+                        <td>
+                            <button type="button" class="btn btn-danger btn-sm"
+                                style="font-size: 10px !important; padding: 0.2rem .5rem !important; margin-right: .7rem !important;">
+                                <i class="nc-icon nc-zoom-split"></i>
+                            </button>
+
+                            <button type="button" class="btn btn-danger btn-sm"
+                                style="font-size: 10px !important; padding: 0.2rem .5rem !important;">
+                                <i class="nc-icon nc-simple-remove"></i>
+                            </button>
+                        </td>
                     </tr>
                 </tbody>
             </table>
