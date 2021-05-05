@@ -1,14 +1,30 @@
-﻿using WaterMarket.Domain;
+﻿using System.Linq;
+using WaterMarket.Domain;
 using WaterMarket.Domain.Models;
 using WaterMarket.Persistence;
-using WaterMarket.Persistence.Repositories.Base;
 
 namespace WaterMarket.Infrastracture.Persistence.Repositories
 {
-    public class OrderRepository : RepositoryBase<Order>, IOrderRepository
+    public class OrderRepository : IOrderRepository
     {
-        public OrderRepository(WaterMarketContext context) : base(context)
+        protected WaterMarketContext context;
+
+        public OrderRepository(WaterMarketContext context)
         {
+            this.context = context;
+        }
+
+        public IQueryable<Order> RetrieveOrder()
+        {
+            return context.Set<Order>();
+        }
+
+        public Order CreateOrder(Order order)
+        {
+            context.Set<Order>()
+                   .Add(order);
+            context.SaveChanges();
+            return order;
         }
     }
 }

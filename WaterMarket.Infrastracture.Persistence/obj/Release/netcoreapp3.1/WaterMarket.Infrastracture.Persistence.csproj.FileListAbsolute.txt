@@ -1,0 +1,17 @@
+C:\Users\RonN\OneDrive - Magenic\Desktop\WaterMarket\WaterMarket.Infrastracture.Persistence\bin\Release\netcoreapp3.1\WaterMarket.Infrastracture.Persistence.deps.json
+C:\Users\RonN\OneDrive - Magenic\Desktop\WaterMarket\WaterMarket.Infrastracture.Persistence\bin\Release\netcoreapp3.1\WaterMarket.Infrastracture.Persistence.runtimeconfig.json
+C:\Users\RonN\OneDrive - Magenic\Desktop\WaterMarket\WaterMarket.Infrastracture.Persistence\bin\Release\netcoreapp3.1\WaterMarket.Infrastracture.Persistence.runtimeconfig.dev.json
+C:\Users\RonN\OneDrive - Magenic\Desktop\WaterMarket\WaterMarket.Infrastracture.Persistence\bin\Release\netcoreapp3.1\WaterMarket.Infrastracture.Persistence.dll
+C:\Users\RonN\OneDrive - Magenic\Desktop\WaterMarket\WaterMarket.Infrastracture.Persistence\bin\Release\netcoreapp3.1\WaterMarket.Infrastracture.Persistence.pdb
+C:\Users\RonN\OneDrive - Magenic\Desktop\WaterMarket\WaterMarket.Infrastracture.Persistence\bin\Release\netcoreapp3.1\WaterMarket.Domain.dll
+C:\Users\RonN\OneDrive - Magenic\Desktop\WaterMarket\WaterMarket.Infrastracture.Persistence\bin\Release\netcoreapp3.1\WaterMarket.Domain.Models.dll
+C:\Users\RonN\OneDrive - Magenic\Desktop\WaterMarket\WaterMarket.Infrastracture.Persistence\bin\Release\netcoreapp3.1\WaterMarket.Domain.pdb
+C:\Users\RonN\OneDrive - Magenic\Desktop\WaterMarket\WaterMarket.Infrastracture.Persistence\bin\Release\netcoreapp3.1\WaterMarket.Domain.Models.pdb
+C:\Users\RonN\OneDrive - Magenic\Desktop\WaterMarket\WaterMarket.Infrastracture.Persistence\obj\Release\netcoreapp3.1\WaterMarket.Infrastracture.Persistence.csprojAssemblyReference.cache
+C:\Users\RonN\OneDrive - Magenic\Desktop\WaterMarket\WaterMarket.Infrastracture.Persistence\obj\Release\netcoreapp3.1\WaterMarket.Infrastracture.Persistence.AssemblyInfoInputs.cache
+C:\Users\RonN\OneDrive - Magenic\Desktop\WaterMarket\WaterMarket.Infrastracture.Persistence\obj\Release\netcoreapp3.1\WaterMarket.Infrastracture.Persistence.AssemblyInfo.cs
+C:\Users\RonN\OneDrive - Magenic\Desktop\WaterMarket\WaterMarket.Infrastracture.Persistence\obj\Release\netcoreapp3.1\WaterMarket.Infrastracture.Persistence.csproj.CoreCompileInputs.cache
+C:\Users\RonN\OneDrive - Magenic\Desktop\WaterMarket\WaterMarket.Infrastracture.Persistence\obj\Release\netcoreapp3.1\WaterMarket.Infrastracture.Persistence.csproj.CopyComplete
+C:\Users\RonN\OneDrive - Magenic\Desktop\WaterMarket\WaterMarket.Infrastracture.Persistence\obj\Release\netcoreapp3.1\WaterMarket.Infrastracture.Persistence.dll
+C:\Users\RonN\OneDrive - Magenic\Desktop\WaterMarket\WaterMarket.Infrastracture.Persistence\obj\Release\netcoreapp3.1\WaterMarket.Infrastracture.Persistence.pdb
+C:\Users\RonN\OneDrive - Magenic\Desktop\WaterMarket\WaterMarket.Infrastracture.Persistence\obj\Release\netcoreapp3.1\WaterMarket.Infrastracture.Persistence.genruntimeconfig.cache

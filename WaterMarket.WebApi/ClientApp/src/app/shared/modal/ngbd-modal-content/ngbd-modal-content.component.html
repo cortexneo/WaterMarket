@@ -1,0 +1,76 @@
+<div class="modal-header">
+    <h5 class="modal-title text-center">{{ modalTitle }}</h5>
+    <button type="button" class="close" aria-label="Close" (click)="onClose('closed')">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+
+<ng-container *ngIf="modalTitle.toUpperCase() == 'REFILL'">
+    <div>
+        <img src="https://i.ibb.co/QHG0FKH/15-liters.jpg" class="img-thumbnail img-responsive" alt="Rounded Image">
+        <p class="text-center">P100 / Gallon</p>
+    </div>
+    <form class="purchase-form">
+        <div class="purchase-card">
+            <div class="row align-items-center justify-content-center">
+                <a style="margin-right: 1rem;">How Many Gallons?</a>
+                <div style="width: 50% !important;">
+                    <input type="number" min="0" class="form-control" [(ngModel)]="gallonQuantity"
+                        name="gallonQuantity">
+                </div>
+            </div>
+            <div class="row align-items-center justify-content-center">
+                <a style="margin-right: 1rem; margin-left: 6rem;">Total:</a>
+                <div style="width: 50% !important;">
+                    <input type="text" class="form-control" [disabled]="true"
+                        value="{{ computeGallonTotalPrice(gallonQuantity) }}">
+                </div>
+            </div>
+        </div>
+    </form>
+</ng-container>
+
+<ng-container *ngIf="modalTitle.toUpperCase() == 'BUY'">
+    <div>
+        <img src="https://i.ibb.co/XVWtqvG/6-liters.jpg" class="img-thumbnail img-responsive" alt="Rounded Image">
+        <p class="text-center">Water Dispenser: 150 / Container</p>
+        <p class="text-center">Water Dispenser with Pipe: 200 / Container</p>
+    </div>
+    <form class="purchase-form">
+        <div class="purchase-card" style="height: 11rem !important;">
+            <div class="row align-items-center justify-content-center">
+                <a style="margin-right: 1rem;">Water Dispenser:</a>
+                <div style="width: 50% !important;">
+                    <input type="number" min="0" class="form-control" [(ngModel)]="waterDispenserQuantity"
+                        name="waterDispenserQuantity">
+                </div>
+            </div>
+            <div class="row align-items-center justify-content-center">
+                <a style="margin-right: 1rem;">Water Dispenser w/ Pipe:</a>
+                <div style="width: 37% !important;">
+                    <input type="number" min="0" class="form-control" [(ngModel)]="waterDispenserPipeQuantity"
+                        name="waterDispenserPipeQuantity">
+                </div>
+            </div>
+            <div class="row align-items-center justify-content-center">
+                <a style="margin-right: 1rem; margin-left: 5rem;">Total:</a>
+                <div style="width: 50% !important;">
+                    <input type="text" class="form-control" [disabled]="true"
+                        value="{{ computeDispenserTotalPrice(waterDispenserQuantity, waterDispenserPipeQuantity) }}">
+                </div>
+            </div>
+        </div>
+    </form>
+</ng-container>
+
+
+
+<div class="modal-footer">
+    <div class="left-side">
+        <button type="button" class="btn btn-success btn-link" (click)="submit()">Confirm</button>
+    </div>
+    <div class="divider"></div>
+    <div class="right-side">
+        <button type="button" class="btn btn-danger btn-link" (click)="onClose('closed')">Cancel</button>
+    </div>
+</div>

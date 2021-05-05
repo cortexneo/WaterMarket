@@ -1,12 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using WaterMarket.Domain.Models;
 
 namespace WaterMarket.Domain
 {
-    public interface IUserRepository : IRepository<User>
+    public interface IUserRepository
     {
-        User RetrieveByUsername(string username, string password);
+        User RetrieveUser(string username, string password);
+
+        User RetrieveUserByUsername(string username);
+
+        void UpdateUserLogin(Guid userID, string password);
     }
 }

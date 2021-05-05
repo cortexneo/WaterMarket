@@ -1,0 +1,34 @@
+<div class="modal-header" style="padding-top: 0 !important;">
+    <h4 class="modal-title" id="modal-title">Update Record</h4>
+    <button type="button" class="close" aria-describedby="modal-title" (click)="modal.close()">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<div class="modal-body" style="padding: 20px 30px !important">
+    <form [formGroup]="customerForm" class="customer-update-form">
+        <div style="padding-bottom: 20px !important">
+            <p><strong>Customer Name:</strong></p>
+            <input type="text" class="form-control" formControlName="name">
+        </div>
+
+        <div style="padding-bottom: 20px !important">
+            <p><strong>Address:</strong></p>
+            <input type="text" class="form-control" formControlName="address">
+        </div>
+
+        <div style="padding-bottom: 20px !important">
+            <p><strong>Contact Number:</strong></p>
+            <input type="text" class="form-control" formControlName="contactNumber">
+        </div>
+
+        <div style="padding-bottom: 20px !important">
+            <p><strong>Order:</strong></p>
+            <input type="text" class="form-control" formControlName="order">
+        </div>
+    </form>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-outline-secondary" style="background-color: #66615B !important"
+        (click)="modal.close()">Cancel</button>
+    <button type="button" class="btn btn-danger" (click)="modal.close(customerForm.value)">Update</button>
+</div>

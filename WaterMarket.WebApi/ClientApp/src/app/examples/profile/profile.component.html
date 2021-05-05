@@ -1,0 +1,60 @@
+<div class="wrapper">
+    <div class="page-header section-dark" style="background-image: url('https://i.ibb.co/MfKxxS7/water.jpg');">
+        <div class="filter"></div>
+        <div class="section profile-content" style="width: 75% !important; padding: 1rem !important;">
+            <div class="d-flex justify-content-between align-items-center" style="margin-bottom: 1rem !important">
+                <p style="font-size: 1rem !important; font-weight: 700 !important;"><b>ADMIN</b></p>
+                <button class="btn btn-danger btn-round"
+                    style="font-size: 10px !important; margin-left: auto !important" (click)="changePassword()">Change
+                    Password</button>
+                <button class="btn btn-danger btn-round" style="font-size: 10px !important;" (click)="logout()">Log
+                    Out</button>
+            </div>
+
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Customer Name</th>
+                        <th scope="col">Address</th>
+                        <th scope="col">Contact Information</th>
+                        <th scope="col">Order/s</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let customer of customers">
+                        <th scope="row">{{ customers.indexOf(customer) + 1 }}</th>
+                        <td>{{ customer.name }}</td>
+                        <td>{{ customer.address}}</td>
+                        <td>{{ customer.contactNumber}}</td>
+                        <td>{{ customer.order.orderedProducts}}</td>
+                        <td style="width: 12% !important;">
+                            <button type="button" class="btn btn-danger btn-sm" (click)="updateCustomer(customer)"
+                                style="font-size: 10px !important; padding: 0.2rem .5rem !important; margin-right: .7rem !important;">
+                                <i class="nc-icon nc-zoom-split"></i>
+                            </button>
+
+                            <button type="button" class="btn btn-danger btn-sm" (click)="deleteCustomer(customer)"
+                                style="font-size: 10px !important; padding: 0.2rem .5rem !important;">
+                                <i class="nc-icon nc-simple-remove"></i>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="d-flex justify-content-between p-2">
+                <ngb-pagination [collectionSize]="collectionSize" [(page)]="page" [pageSize]="pageSize"
+                    (pageChange)="getCustomers()">
+                </ngb-pagination>
+
+                <select class="custom-select" style="width: auto" [(ngModel)]="pageSize"
+                    (ngModelChange)="getCustomers()">
+                    <option [ngValue]="2">2 items per page</option>
+                    <option [ngValue]="4">4 items per page</option>
+                    <option [ngValue]="10">10 items per page</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</div>
