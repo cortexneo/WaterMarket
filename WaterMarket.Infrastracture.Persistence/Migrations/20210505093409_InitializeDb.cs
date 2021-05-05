@@ -53,14 +53,17 @@ namespace WaterMarket.Infrastracture.Persistence.Migrations
                         column: x => x.OrderID,
                         principalTable: "Orders",
                         principalColumn: "OrderID",
-                        onDelete: ReferentialAction.Cascade,
-                        onUpdate: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Customers_OrderID",
                 table: "Customers",
                 column: "OrderID");
+
+            migrationBuilder.Sql(@"
+                INSERT INTO Users VALUES
+                (NEWID(), 'admin', 'strongpassword')");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
