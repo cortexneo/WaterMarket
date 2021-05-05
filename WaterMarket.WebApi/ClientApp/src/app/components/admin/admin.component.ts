@@ -2,17 +2,17 @@ import { HttpClient } from '@angular/common/http';
 import { Component, Inject, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { NgbActiveModal, NgbModal, NgbModalOptions } from '@ng-bootstrap/ng-bootstrap';
-import { Order } from 'app/shared/modal/ngbd-modal-content/ngbd-modal-content.component';
+import { Order } from 'app/components/transaction/pruchase-modal/pruchase-modal.component';
 import { UpdatePasswordComponent } from './update-password/update-password.component';
 import { UpdateProfileComponent } from './update-profile/update-profile.component';
 
 @Component({
-    selector: 'app-profile',
-    templateUrl: './profile.component.html',
-    styleUrls: ['./profile.component.scss']
+    selector: 'app-admin',
+    templateUrl: './admin.component.html',
+    styleUrls: ['./admin.component.scss']
 })
 
-export class ProfileComponent implements OnInit {
+export class AdminComponent implements OnInit {
 
     page = 1;
     pageSize = 4;
@@ -120,8 +120,8 @@ export class ProfileComponent implements OnInit {
 })
 export class NgbdModalConfirm {
 
-    @Input() modalTitle;
-    @Input() message;
+    @Input() modalTitle: any;
+    @Input() message: any;
 
     constructor(public modal: NgbActiveModal) { }
 }

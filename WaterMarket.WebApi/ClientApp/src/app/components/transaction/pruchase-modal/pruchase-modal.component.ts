@@ -4,14 +4,14 @@ import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { Customer } from 'app/components/components.component';
 
 @Component({
-  selector: 'app-ngbd-modal-content',
-  templateUrl: './ngbd-modal-content.component.html',
-  styleUrls: ['./ngbd-modal-content.component.css']
+  selector: 'app-purchase-modal',
+  templateUrl: './pruchase-modal.component.html',
+  styleUrls: ['./pruchase-modal.component.css']
 })
-export class NgbdModalContentComponent implements OnInit {
+export class PurchaseModalComponent implements OnInit {
 
-  @Input() modalTitle;
-  @Input() customerData;
+  @Input() modalTitle: any;
+  @Input() customerData: any;
 
   gallonQuantity = 0;
   waterDispenserQuantity = 0;

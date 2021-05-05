@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { CanActivate, Router } from '@angular/router';
 import { NgbModal, NgbModalOptions } from '@ng-bootstrap/ng-bootstrap';
-import { NgbdModalConfirm } from 'app/examples/profile/profile.component';
+import { NgbdModalConfirm } from 'app/components/admin/admin.component';
 
 @Injectable({
     providedIn: 'root'

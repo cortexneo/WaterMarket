@@ -1,9 +1,9 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, Inject, Input, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NgbActiveModal, NgbModal, NgbModalOptions } from '@ng-bootstrap/ng-bootstrap';
-import { IUser } from 'app/examples/signup/signup.component';
-import { NgbdModalConfirm } from '../profile.component';
+import { IUser } from 'app/components/signin/signin.component';
+import { NgbdModalConfirm } from '../admin.component';
 
 @Component({
   selector: 'app-update-password',

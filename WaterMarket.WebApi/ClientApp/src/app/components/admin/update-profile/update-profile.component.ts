@@ -8,7 +8,7 @@ import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./update-profile.component.css']
 })
 export class UpdateProfileComponent implements OnInit {
-  @Input() customerDetails;
+  @Input() customerDetails: any;
 
   customerForm: FormGroup;
 

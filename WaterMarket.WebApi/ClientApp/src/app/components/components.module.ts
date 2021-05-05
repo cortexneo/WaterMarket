@@ -1,22 +1,22 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbActiveModal, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NouisliderModule } from 'ng2-nouislider';
 import { JwBootstrapSwitchNg2Module } from 'jw-bootstrap-switch-ng2';
 import { RouterModule } from '@angular/router';
-
-import { BasicelementsComponent } from './basicelements/basicelements.component';
-import { NavigationComponent } from './navigation/navigation.component';
-import { TypographyComponent } from './typography/typography.component';
-import { NucleoiconsComponent } from './nucleoicons/nucleoicons.component';
 import { ComponentsComponent } from './components.component';
-import { NotificationComponent } from './notification/notification.component';
-import { NgbdModalComponent } from './modal/modal.component';
-import { NgbdModalContent } from './modal/modal.component';
+import { SigninComponent } from './signin/signin.component';
+import { AdminComponent } from './admin/admin.component';
+import { PurchaseModalComponent } from 'app/components/transaction/pruchase-modal/pruchase-modal.component';
+import { UpdateProfileComponent } from './admin/update-profile/update-profile.component';
+import { UpdatePasswordComponent } from './admin/update-password/update-password.component';
+import { HttpClientModule } from '@angular/common/http';
+import { TransactionComponent } from './transaction/transaction.component';
 
 @NgModule({
     imports: [
+        HttpClientModule,
         CommonModule,
         FormsModule,
         NgbModule,
@@ -27,15 +27,15 @@ import { NgbdModalContent } from './modal/modal.component';
     ],
     declarations: [
         ComponentsComponent,
-        BasicelementsComponent,
-        NavigationComponent,
-        TypographyComponent,
-        NucleoiconsComponent,
-        NotificationComponent,
-        NgbdModalComponent,
-        NgbdModalContent
+        TransactionComponent,
+        SigninComponent,
+        AdminComponent,
+        PurchaseModalComponent,
+        UpdateProfileComponent,
+        UpdatePasswordComponent
     ],
-    entryComponents: [NgbdModalContent],
-    exports: [ComponentsComponent]
+    entryComponents: [PurchaseModalComponent],
+    providers: [NgbActiveModal],
+    exports: [ComponentsComponent],
 })
 export class ComponentsModule { }

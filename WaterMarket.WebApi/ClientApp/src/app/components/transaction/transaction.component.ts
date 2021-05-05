@@ -1,14 +1,14 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { NgbModal, NgbActiveModal, NgbModalOptions } from '@ng-bootstrap/ng-bootstrap';
-import { NgbdModalContentComponent } from 'app/shared/modal/ngbd-modal-content/ngbd-modal-content.component';
+import { Component, OnInit } from '@angular/core';
+import { NgbModal, NgbModalOptions } from '@ng-bootstrap/ng-bootstrap';
+import { PurchaseModalComponent } from 'app/components/transaction/pruchase-modal/pruchase-modal.component';
 
 @Component({
-  selector: 'app-landing',
-  templateUrl: './landing.component.html',
-  styleUrls: ['./landing.component.scss']
+  selector: 'app-transaction',
+  templateUrl: './transaction.component.html',
+  styleUrls: ['./transaction.component.scss']
 })
 
-export class LandingComponent implements OnInit {
+export class TransactionComponent implements OnInit {
   focus: any;
   focus1: any;
 
@@ -24,7 +24,7 @@ export class LandingComponent implements OnInit {
   ngOnInit() { }
 
   openRefillModal() {
-    const modalRef = this.modalService.open(NgbdModalContentComponent, this.ngbModalOptions);
+    const modalRef = this.modalService.open(PurchaseModalComponent, this.ngbModalOptions);
     modalRef.componentInstance.modalTitle = 'Refill';
     modalRef.componentInstance.customerData = history.state.data;
 
@@ -34,7 +34,7 @@ export class LandingComponent implements OnInit {
   }
 
   openBuyModal() {
-    const modalRef = this.modalService.open(NgbdModalContentComponent, this.ngbModalOptions);
+    const modalRef = this.modalService.open(PurchaseModalComponent, this.ngbModalOptions);
     modalRef.componentInstance.modalTitle = 'Buy';
     modalRef.componentInstance.customerData = history.state.data;
 
