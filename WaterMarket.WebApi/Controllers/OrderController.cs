@@ -23,7 +23,7 @@ namespace WaterMarket.WebApi.Controllers
         [ProducesResponseType((int)HttpStatusCode.OK)]
         public ActionResult<Order> Get()
         {
-            return Ok(_orderRepository.Retrieve());
+            return Ok(_orderRepository.RetrieveOrder());
         }
 
         [HttpPost]
@@ -33,7 +33,7 @@ namespace WaterMarket.WebApi.Controllers
         {
             try
             {
-                var result = _orderRepository.Create(order);
+                var result = _orderRepository.CreateOrder(order);
                 return Ok(result);
 
             }

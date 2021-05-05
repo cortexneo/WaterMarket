@@ -7,6 +7,8 @@ import { ProfileComponent } from './profile/profile.component';
 import { SignupComponent } from './signup/signup.component';
 import { NgbdModalContentComponent } from 'app/shared/modal/ngbd-modal-content/ngbd-modal-content.component';
 import { HttpClientModule } from '@angular/common/http';
+import { UpdateProfileComponent } from './profile/update-profile/update-profile.component';
+import { UpdatePasswordComponent } from './profile/update-password/update-password.component';
 
 @NgModule({
     imports: [
@@ -20,7 +22,9 @@ import { HttpClientModule } from '@angular/common/http';
         LandingComponent,
         SignupComponent,
         ProfileComponent,
-        NgbdModalContentComponent
+        NgbdModalContentComponent,
+        UpdateProfileComponent,
+        UpdatePasswordComponent
     ],
     entryComponents: [NgbdModalContentComponent],
     providers: [NgbActiveModal]

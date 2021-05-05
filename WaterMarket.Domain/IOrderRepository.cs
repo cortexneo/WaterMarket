@@ -1,8 +1,12 @@
-﻿using WaterMarket.Domain.Models;
+﻿using System.Linq;
+using WaterMarket.Domain.Models;
 
 namespace WaterMarket.Domain
 {
-    public interface IOrderRepository : IRepository<Order>
+    public interface IOrderRepository
     {
+        IQueryable<Order> RetrieveOrder();
+
+        Order CreateOrder(Order order);
     }
 }

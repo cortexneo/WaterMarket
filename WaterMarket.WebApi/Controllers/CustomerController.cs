@@ -1,11 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using WaterMarket.Domain;
-using WaterMarket.Domain.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
-using System.Threading.Tasks;
+using WaterMarket.Domain;
+using WaterMarket.Domain.Models;
 
 namespace WaterMarket.WebApi.Controllers
 {
@@ -35,7 +34,7 @@ namespace WaterMarket.WebApi.Controllers
         {
             try
             {
-                var result = _customerRepository.Create(customer);
+                var result = _customerRepository.CreateCustomer(customer);
                 return Ok(result);
 
             }
@@ -48,16 +47,28 @@ namespace WaterMarket.WebApi.Controllers
         [HttpPut]
         [ProducesResponseType((int)HttpStatusCode.OK)]
         [ProducesResponseType((int)HttpStatusCode.BadRequest)]
-        public ActionResult UpdateCustomer(Guid customerID, Guid orderID)
+        public ActionResult UpdateCustomer(Guid customerID, Customer customer)
         {
-            var customerRecord = _customerRepository.Retrieve(customerID);
-            if (customerRecord == null) return NotFound();
-            customerRecord.OrderID = orderID;
-
             try
             {
-                var result = _customerRepository.Update(customerID, customerRecord);
+                var result = _customerRepository.UpdateCustomer(customerID, customer);
                 return Ok(result);
+            }
+            catch (Exception)
+            {
+                return BadRequest();
+            }
+        }
+
+        [HttpDelete]
+        [ProducesResponseType((int)HttpStatusCode.OK)]
+        [ProducesResponseType((int)HttpStatusCode.BadRequest)]
+        public ActionResult DeleteCustomer(Guid customerID)
+        {
+            try
+            {
+                _customerRepository.DeleteCustomer(customerID);
+                return Ok();
             }
             catch (Exception)
             {

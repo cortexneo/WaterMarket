@@ -23,7 +23,6 @@ export class NgbdModalContentComponent implements OnInit {
     public http: HttpClient, @Inject('BASE_URL') public baseUrl: string) { }
 
   ngOnInit(): void {
-    this.customerData;
   }
 
   computeGallonTotalPrice(quantity: number) {

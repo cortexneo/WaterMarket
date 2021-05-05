@@ -10,8 +10,8 @@ using WaterMarket.Persistence;
 namespace WaterMarket.Infrastracture.Persistence.Migrations
 {
     [DbContext(typeof(WaterMarketContext))]
-    [Migration("20210501143348_initializeDb")]
-    partial class initializeDb
+    [Migration("20210505093409_InitializeDb")]
+    partial class InitializeDb
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

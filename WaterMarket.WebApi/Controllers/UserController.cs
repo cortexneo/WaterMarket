@@ -23,7 +23,30 @@ namespace WaterMarket.WebApi.Controllers
         [ProducesResponseType((int)HttpStatusCode.OK)]
         public ActionResult<User> GetUser(string username, string password)
         {
-            return Ok(_userRepository.RetrieveByUsername(username, password));
+            return Ok(_userRepository.RetrieveUser(username, password));
+        }
+
+        [HttpGet("GetUserByUsername")]
+        [ProducesResponseType((int)HttpStatusCode.OK)]
+        public ActionResult<User> GetUserByUsername(string username)
+        {
+            return Ok(_userRepository.RetrieveUserByUsername(username));
+        }
+
+        [HttpPut]
+        [ProducesResponseType((int)HttpStatusCode.OK)]
+        [ProducesResponseType((int)HttpStatusCode.BadRequest)]
+        public ActionResult UpdateUser(Guid userID, string password)
+        {
+            try
+            {
+                _userRepository.UpdateUserLogin(userID, password);
+                return Ok();
+            }
+            catch (Exception)
+            {
+                return BadRequest();
+            }
         }
     }
 }

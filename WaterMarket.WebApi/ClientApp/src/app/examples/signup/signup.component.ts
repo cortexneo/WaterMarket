@@ -60,7 +60,7 @@ export class SignupComponent implements OnInit {
 }
 
 export interface IUser {
-    userId: string;
+    userID: string;
     username: string;
     password: string;
 }
