@@ -1,12 +1,15 @@
 <div class="wrapper">
-    <div class="page-header section-dark" style="background-image: url('https://i.ibb.co/MfKxxS7/water.jpg');">
+    <div class="page-header section-dark d-flex flex-column"
+        style="background-image: url('https://i.ibb.co/MfKxxS7/water.jpg');">
         <div class="filter"></div>
         <div class="section profile-content" style="width: 75% !important; padding: 1rem !important;">
             <div class="d-flex justify-content-between align-items-center" style="margin-bottom: 1rem !important">
-                <p style="font-size: 1rem !important; font-weight: 700 !important;"><b>ADMIN</b></p>
+                <p style="font-size: 1rem !important; font-weight: 700 !important;"><b>ORDERS</b></p>
                 <button class="btn btn-danger btn-round"
-                    style="font-size: 10px !important; margin-left: auto !important" (click)="changePassword()">Change
-                    Password</button>
+                    style="font-size: 10px !important; margin-left: auto !important" (click)="showSales()">Show
+                    Sales Report</button>
+                <button class="btn btn-danger btn-round" style="font-size: 10px !important;"
+                    (click)="changePassword()">Change Password</button>
                 <button class="btn btn-danger btn-round" style="font-size: 10px !important;" (click)="logout()">Log
                     Out</button>
             </div>
@@ -29,10 +32,10 @@
                         <td>{{ customer.contactNumber}}</td>
                         <td>{{ customer.order.orderedProducts}}</td>
                         <td style="width: 12% !important;">
-                            <button type="button" class="btn btn-danger btn-sm" (click)="updateCustomer(customer)"
+                            <!-- <button type="button" class="btn btn-danger btn-sm" (click)="updateCustomer(customer)"
                                 style="font-size: 10px !important; padding: 0.2rem .5rem !important; margin-right: .7rem !important;">
                                 <i class="nc-icon nc-zoom-split"></i>
-                            </button>
+                            </button> -->
 
                             <button type="button" class="btn btn-danger btn-sm" (click)="deleteCustomer(customer)"
                                 style="font-size: 10px !important; padding: 0.2rem .5rem !important;">
@@ -54,6 +57,72 @@
                     <option [ngValue]="4">4 items per page</option>
                     <option [ngValue]="10">10 items per page</option>
                 </select>
+            </div>
+        </div>
+
+
+        <div *ngIf="showSalesReport" class="section profile-content"
+            style="width: 75% !important; padding: 1rem !important; margin-top: 3rem !important;">
+            <div class="d-flex justify-content-between align-items-center" style="margin-bottom: 1rem !important">
+                <p style="font-size: 1rem !important; font-weight: 700 !important;"><b>SALES REPORT</b></p>
+                <form class="form-inline">
+                    <div class="form-group">
+                        <button class="btn btn-danger btn-round" style="font-size: 10px !important;"
+                            (click)="getSalesReport()">Clear</button>
+                        <div class="input-group">
+                            <input class="form-control" placeholder="yyyy-mm-dd" name="dp" ngbDatepicker
+                                #d="ngbDatepicker" [(ngModel)]="model" (ngModelChange)="onDateChange()" readonly>
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-secondary calendar" (click)="d.toggle()"
+                                    type="button"></button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">Date</th>
+                        <th scope="col">Orders</th>
+                        <th scope="col">Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let order of salesOrderReport">
+                        <td>{{ order.purchasedDate | date }}</td>
+                        <td>{{ order.orderedProducts }}</td>
+                        <td>{{ order.amount}}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="d-flex justify-content-around p-2">
+                <div class="d-flex">
+                    <p style="font-size: 1rem !important; font-weight: 700 !important; margin-right: 1rem !important;">
+                        <b>Total Number of
+                            Customers:</b></p>
+                    <p style="font-size: 1rem !important; font-weight: 700 !important;">
+                        <b>{{ salesOrderReport.length }}</b>
+                    </p>
+                </div>
+                <div class="d-flex">
+                    <p style="font-size: 1rem !important; font-weight: 700 !important; margin-right: 1rem !important;">
+                        <b>Total Sales:</b></p>
+                    <p style="font-size: 1rem !important; font-weight: 700 !important;"><b>{{ totalSales }}</b></p>
+                </div>
+
+                <!-- <ngb-pagination [collectionSize]="orderCollectionSize" [(page)]="orderPage" [pageSize]="orderPageSize"
+                    (pageChange)="getSalesReport()">
+                </ngb-pagination>
+
+                <select class="custom-select" style="width: auto" [(ngModel)]="orderPageSize"
+                    (ngModelChange)="getSalesReport()">
+                    <option [ngValue]="2">2 items per page</option>
+                    <option [ngValue]="4">4 items per page</option>
+                    <option [ngValue]="10">10 items per page</option>
+                </select> -->
             </div>
         </div>
     </div>

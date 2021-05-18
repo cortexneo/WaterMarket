@@ -5963,7 +5963,9 @@
         "netcoreapp3.1"
       ],
       "sources": {
-        "https://api.nuget.org/v3/index.json": {}
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {},
+        "https://pkgs.dev.azure.com/intuvo/_packaging/Intuvo/nuget/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp3.1": {

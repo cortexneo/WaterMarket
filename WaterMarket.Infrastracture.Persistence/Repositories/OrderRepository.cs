@@ -16,7 +16,7 @@ namespace WaterMarket.Infrastracture.Persistence.Repositories
 
         public IQueryable<Order> RetrieveOrder()
         {
-            return context.Set<Order>();
+            return context.Set<Order>().OrderBy(x => x.PurchasedDate);
         }
 
         public Order CreateOrder(Order order)

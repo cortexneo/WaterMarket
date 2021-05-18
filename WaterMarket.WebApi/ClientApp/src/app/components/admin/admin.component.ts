@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, Inject, Input, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, Inject, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { NgbActiveModal, NgbModal, NgbModalOptions } from '@ng-bootstrap/ng-bootstrap';
+import { NgbActiveModal, NgbDateStruct, NgbModal, NgbModalOptions } from '@ng-bootstrap/ng-bootstrap';
 import { Order } from 'app/components/transaction/pruchase-modal/pruchase-modal.component';
 import { UpdatePasswordComponent } from './update-password/update-password.component';
 import { UpdateProfileComponent } from './update-profile/update-profile.component';
@@ -17,7 +17,15 @@ export class AdminComponent implements OnInit {
     page = 1;
     pageSize = 4;
     collectionSize: number;
+    orderPage = 1;
+    orderPageSize = 4;
+    orderCollectionSize: number;
     customers: ICustomer[];
+    orders: IOrder[];
+    salesOrderReport: IOrder[];
+    showSalesReport = false;
+    totalSales: number;
+    model: NgbDateStruct;
 
     ngbModalOptions: NgbModalOptions = {
         backdrop: 'static',
@@ -26,10 +34,11 @@ export class AdminComponent implements OnInit {
 
     constructor(public http: HttpClient,
         @Inject('BASE_URL') public baseUrl: string, public router: Router,
-        private modalService: NgbModal) { }
+        private modalService: NgbModal, private ref: ChangeDetectorRef) { }
 
     ngOnInit() {
         this.getCustomers();
+        this.getSalesReport();
     }
 
     getCustomers() {
@@ -37,6 +46,30 @@ export class AdminComponent implements OnInit {
             if (!result) return;
             this.collectionSize = result.length;
             this.customers = result.slice((this.page - 1) * this.pageSize, (this.page - 1) * this.pageSize + this.pageSize);
+        }, error => console.error(error));
+    }
+
+    getSalesReport() {
+        this.http.get<IOrder[]>(this.baseUrl + 'Order').subscribe(result => {
+            if (!result) return;
+            this.orderCollectionSize = result.length;
+            this.salesOrderReport = result;
+            this.totalSales = result.map(x => x.amount).reduce((a, b) => a + b, 0);
+        }, error => console.error(error));
+    }
+
+    onDateChange() {
+        this.http.get<IOrder[]>(this.baseUrl + 'Order').subscribe(result => {
+            if (!result) return;
+            this.orderCollectionSize = result.length;
+            result.forEach(x => {
+                x.purchasedDate = new Date(x.purchasedDate);
+            });
+            this.salesOrderReport = result.filter(x => (x.purchasedDate.getMonth() + 1) === this.model.month
+                && x.purchasedDate.getDate() === this.model.day && x.purchasedDate.getFullYear() === this.model.year)
+
+            this.totalSales = this.salesOrderReport.map(x => x.amount).reduce((a, b) => a + b, 0);
+            this.ref.detectChanges();
         }, error => console.error(error));
     }
 
@@ -60,6 +93,10 @@ export class AdminComponent implements OnInit {
                 modalRef.close();
             }
         })
+    }
+
+    showSales() {
+        this.showSalesReport = !this.showSalesReport;
     }
 
     updateCustomer(customer: ICustomer) {
@@ -133,4 +170,11 @@ export interface ICustomer {
     contactNumber: string;
     orderID: string;
     order: Order;
+}
+
+export interface IOrder {
+    orderID: string;
+    orderedProducts: string;
+    amount: number;
+    purchasedDate: Date;
 }

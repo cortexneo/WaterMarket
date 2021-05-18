@@ -99,4 +99,5 @@ export class Order {
   orderID: string;
   orderedProducts: string;
   amount: number;
+  purchasedDate: string;
 }

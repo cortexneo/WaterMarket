@@ -28,7 +28,7 @@ namespace WaterMarket.Persistence.Repositories
         public IEnumerable<Customer> RetrieveAllCustomer()
         {
             return context.Set<Customer>()
-                .Include(x => x.Order);
+                .Include(x => x.Order).OrderBy(x => x.Order.PurchasedDate);
         }
 
         public Customer UpdateCustomer(Guid customerID, Customer customer)
