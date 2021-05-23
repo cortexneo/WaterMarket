@@ -10,3 +10,15 @@ C:\Users\RonN\OneDrive - Magenic\Desktop\WaterMarket\WaterMarket.Domain\obj\Rele
 C:\Users\RonN\OneDrive - Magenic\Desktop\WaterMarket\WaterMarket.Domain\obj\Release\netcoreapp3.1\WaterMarket.Domain.csproj.CopyComplete
 C:\Users\RonN\OneDrive - Magenic\Desktop\WaterMarket\WaterMarket.Domain\obj\Release\netcoreapp3.1\WaterMarket.Domain.dll
 C:\Users\RonN\OneDrive - Magenic\Desktop\WaterMarket\WaterMarket.Domain\obj\Release\netcoreapp3.1\WaterMarket.Domain.pdb
+C:\watermarket\WaterMarket.Domain\bin\Release\netcoreapp3.1\WaterMarket.Domain.deps.json
+C:\watermarket\WaterMarket.Domain\bin\Release\netcoreapp3.1\WaterMarket.Domain.dll
+C:\watermarket\WaterMarket.Domain\bin\Release\netcoreapp3.1\WaterMarket.Domain.pdb
+C:\watermarket\WaterMarket.Domain\bin\Release\netcoreapp3.1\WaterMarket.Domain.Models.dll
+C:\watermarket\WaterMarket.Domain\bin\Release\netcoreapp3.1\WaterMarket.Domain.Models.pdb
+C:\watermarket\WaterMarket.Domain\obj\Release\netcoreapp3.1\WaterMarket.Domain.csprojAssemblyReference.cache
+C:\watermarket\WaterMarket.Domain\obj\Release\netcoreapp3.1\WaterMarket.Domain.AssemblyInfoInputs.cache
+C:\watermarket\WaterMarket.Domain\obj\Release\netcoreapp3.1\WaterMarket.Domain.AssemblyInfo.cs
+C:\watermarket\WaterMarket.Domain\obj\Release\netcoreapp3.1\WaterMarket.Domain.csproj.CoreCompileInputs.cache
+C:\watermarket\WaterMarket.Domain\obj\Release\netcoreapp3.1\WaterMarket.Domain.csproj.CopyComplete
+C:\watermarket\WaterMarket.Domain\obj\Release\netcoreapp3.1\WaterMarket.Domain.dll
+C:\watermarket\WaterMarket.Domain\obj\Release\netcoreapp3.1\WaterMarket.Domain.pdb

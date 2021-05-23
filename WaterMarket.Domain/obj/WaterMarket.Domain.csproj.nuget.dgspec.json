@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\RonN\\OneDrive - Magenic\\Desktop\\WaterMarket\\WaterMarket.Domain\\WaterMarket.Domain.csproj": {}
+    "C:\\watermarket\\WaterMarket.Domain\\WaterMarket.Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\RonN\\OneDrive - Magenic\\Desktop\\WaterMarket\\WaterMarket.Domain.Models\\WaterMarket.Domain.Models.csproj": {
+    "C:\\watermarket\\WaterMarket.Domain.Models\\WaterMarket.Domain.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\RonN\\OneDrive - Magenic\\Desktop\\WaterMarket\\WaterMarket.Domain.Models\\WaterMarket.Domain.Models.csproj",
+        "projectUniqueName": "C:\\watermarket\\WaterMarket.Domain.Models\\WaterMarket.Domain.Models.csproj",
         "projectName": "WaterMarket.Domain.Models",
-        "projectPath": "C:\\Users\\RonN\\OneDrive - Magenic\\Desktop\\WaterMarket\\WaterMarket.Domain.Models\\WaterMarket.Domain.Models.csproj",
-        "packagesPath": "C:\\Users\\RonN\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\RonN\\OneDrive - Magenic\\Desktop\\WaterMarket\\WaterMarket.Domain.Models\\obj\\",
+        "projectPath": "C:\\watermarket\\WaterMarket.Domain.Models\\WaterMarket.Domain.Models.csproj",
+        "packagesPath": "C:\\Users\\nativ\\.nuget\\packages\\",
+        "outputPath": "C:\\watermarket\\WaterMarket.Domain.Models\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\RonN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\nativ\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,8 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://pkgs.dev.azure.com/intuvo/_packaging/Intuvo/nuget/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
@@ -61,25 +60,28 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\RonN\\OneDrive - Magenic\\Desktop\\WaterMarket\\WaterMarket.Domain\\WaterMarket.Domain.csproj": {
+    "C:\\watermarket\\WaterMarket.Domain\\WaterMarket.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\RonN\\OneDrive - Magenic\\Desktop\\WaterMarket\\WaterMarket.Domain\\WaterMarket.Domain.csproj",
+        "projectUniqueName": "C:\\watermarket\\WaterMarket.Domain\\WaterMarket.Domain.csproj",
         "projectName": "WaterMarket.Domain",
-        "projectPath": "C:\\Users\\RonN\\OneDrive - Magenic\\Desktop\\WaterMarket\\WaterMarket.Domain\\WaterMarket.Domain.csproj",
-        "packagesPath": "C:\\Users\\RonN\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\RonN\\OneDrive - Magenic\\Desktop\\WaterMarket\\WaterMarket.Domain\\obj\\",
+        "projectPath": "C:\\watermarket\\WaterMarket.Domain\\WaterMarket.Domain.csproj",
+        "packagesPath": "C:\\Users\\nativ\\.nuget\\packages\\",
+        "outputPath": "C:\\watermarket\\WaterMarket.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\RonN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\nativ\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -87,15 +89,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://pkgs.dev.azure.com/intuvo/_packaging/Intuvo/nuget/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\RonN\\OneDrive - Magenic\\Desktop\\WaterMarket\\WaterMarket.Domain.Models\\WaterMarket.Domain.Models.csproj": {
-                "projectPath": "C:\\Users\\RonN\\OneDrive - Magenic\\Desktop\\WaterMarket\\WaterMarket.Domain.Models\\WaterMarket.Domain.Models.csproj"
+              "C:\\watermarket\\WaterMarket.Domain.Models\\WaterMarket.Domain.Models.csproj": {
+                "projectPath": "C:\\watermarket\\WaterMarket.Domain.Models\\WaterMarket.Domain.Models.csproj"
               }
             }
           }
@@ -120,11 +121,14 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }

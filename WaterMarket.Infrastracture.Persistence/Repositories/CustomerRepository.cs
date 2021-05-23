@@ -61,7 +61,7 @@ namespace WaterMarket.Persistence.Repositories
             if (customerToRemove != null)
             {
                 context.Set<Customer>().Remove(customerToRemove);
-                context.Set<Order>().Remove(customerToRemove.Order);
+                //context.Set<Order>().Remove(customerToRemove.Order);
                 context.SaveChanges();
             }
         }

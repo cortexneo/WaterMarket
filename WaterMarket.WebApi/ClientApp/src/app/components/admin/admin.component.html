@@ -16,33 +16,35 @@
 
             <table class="table table-striped">
                 <thead>
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Customer Name</th>
-                        <th scope="col">Address</th>
-                        <th scope="col">Contact Information</th>
-                        <th scope="col">Order/s</th>
-                    </tr>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Customer Name</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">Contact Information</th>
+                    <th scope="col">Order/s</th>
+                    <th scope="col">Date</th>
+                  </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let customer of customers">
-                        <th scope="row">{{ customers.indexOf(customer) + 1 }}</th>
-                        <td>{{ customer.name }}</td>
-                        <td>{{ customer.address}}</td>
-                        <td>{{ customer.contactNumber}}</td>
-                        <td>{{ customer.order.orderedProducts}}</td>
-                        <td style="width: 12% !important;">
-                            <!-- <button type="button" class="btn btn-danger btn-sm" (click)="updateCustomer(customer)"
-                                style="font-size: 10px !important; padding: 0.2rem .5rem !important; margin-right: .7rem !important;">
-                                <i class="nc-icon nc-zoom-split"></i>
-                            </button> -->
+                  <tr *ngFor="let customer of customers">
+                    <th scope="row">{{ customers.indexOf(customer) + 1 }}</th>
+                    <td>{{ customer.name }}</td>
+                    <td>{{ customer.address}}</td>
+                    <td>{{ customer.contactNumber}}</td>
+                    <td>{{ customer.order.orderedProducts}}</td>
+                    <td>{{ customer.order.purchasedDate | date }}</td>
+                    <td style="width: 12% !important;">
+                      <!-- <button type="button" class="btn btn-danger btn-sm" (click)="updateCustomer(customer)"
+        style="font-size: 10px !important; padding: 0.2rem .5rem !important; margin-right: .7rem !important;">
+        <i class="nc-icon nc-zoom-split"></i>
+    </button> -->
 
-                            <button type="button" class="btn btn-danger btn-sm" (click)="deleteCustomer(customer)"
-                                style="font-size: 10px !important; padding: 0.2rem .5rem !important;">
-                                <i class="nc-icon nc-simple-remove"></i>
-                            </button>
-                        </td>
-                    </tr>
+                      <button type="button" class="btn btn-danger btn-sm" (click)="deleteCustomer(customer)"
+                              style="font-size: 10px !important; padding: 0.2rem .5rem !important;">
+                        <i class="nc-icon nc-simple-remove"></i>
+                      </button>
+                    </td>
+                  </tr>
                 </tbody>
             </table>
 
@@ -93,7 +95,7 @@
                     <tr *ngFor="let order of salesOrderReport">
                         <td>{{ order.purchasedDate | date }}</td>
                         <td>{{ order.orderedProducts }}</td>
-                        <td>{{ order.amount}}</td>
+                        <td>{{ order.amount }}</td>
                     </tr>
                 </tbody>
             </table>

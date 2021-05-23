@@ -6,3 +6,12 @@ C:\Users\RonN\OneDrive - Magenic\Desktop\WaterMarket\WaterMarket.Domain.Models\o
 C:\Users\RonN\OneDrive - Magenic\Desktop\WaterMarket\WaterMarket.Domain.Models\obj\Debug\netcoreapp3.1\WaterMarket.Domain.Models.csproj.CoreCompileInputs.cache
 C:\Users\RonN\OneDrive - Magenic\Desktop\WaterMarket\WaterMarket.Domain.Models\obj\Debug\netcoreapp3.1\WaterMarket.Domain.Models.dll
 C:\Users\RonN\OneDrive - Magenic\Desktop\WaterMarket\WaterMarket.Domain.Models\obj\Debug\netcoreapp3.1\WaterMarket.Domain.Models.pdb
+C:\watermarket\WaterMarket.Domain.Models\bin\Debug\netcoreapp3.1\WaterMarket.Domain.Models.deps.json
+C:\watermarket\WaterMarket.Domain.Models\bin\Debug\netcoreapp3.1\WaterMarket.Domain.Models.dll
+C:\watermarket\WaterMarket.Domain.Models\bin\Debug\netcoreapp3.1\WaterMarket.Domain.Models.pdb
+C:\watermarket\WaterMarket.Domain.Models\obj\Debug\netcoreapp3.1\WaterMarket.Domain.Models.csprojAssemblyReference.cache
+C:\watermarket\WaterMarket.Domain.Models\obj\Debug\netcoreapp3.1\WaterMarket.Domain.Models.AssemblyInfoInputs.cache
+C:\watermarket\WaterMarket.Domain.Models\obj\Debug\netcoreapp3.1\WaterMarket.Domain.Models.AssemblyInfo.cs
+C:\watermarket\WaterMarket.Domain.Models\obj\Debug\netcoreapp3.1\WaterMarket.Domain.Models.csproj.CoreCompileInputs.cache
+C:\watermarket\WaterMarket.Domain.Models\obj\Debug\netcoreapp3.1\WaterMarket.Domain.Models.dll
+C:\watermarket\WaterMarket.Domain.Models\obj\Debug\netcoreapp3.1\WaterMarket.Domain.Models.pdb
